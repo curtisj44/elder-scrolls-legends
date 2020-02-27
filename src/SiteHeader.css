@@ -1,0 +1,18 @@
+.site-header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+/* TODO: use BEM */
+.site-header h1 {
+  background: var(--dark-moon);
+  font: 1rem/1 var(--serif);
+  letter-spacing: 0.07em;
+  padding: 0.6rem 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
