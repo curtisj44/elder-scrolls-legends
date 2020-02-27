@@ -38,8 +38,8 @@ These a few of the key commands:
 | `npm test`| Launches the test runner in the interactive watch mode.<br /> See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information. |
 | `npm run build` | Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information. |
 
-## Learn More
+## Learn more about Create React App
 
-- [Getting Started with Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Getting Started](https://facebook.github.io/create-react-app/docs/getting-started).
 - [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 - [Advanced Configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
