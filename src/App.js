@@ -19,7 +19,7 @@ const App = () => {
   const [cards, setCards] = useState([]);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [newRequest, setNewRequest] = useState(true);
+  const [isNewRequest, setIsNewRequest] = useState(true);
   const [page, setPage] = useState(1);
 
   const cardsRef = useRef(null);
@@ -30,8 +30,7 @@ const App = () => {
     const cardCount = 20;
 
     const fetchCards = async () => {
-      if (!newRequest) return;
-
+      if (!isNewRequest) return;
       setIsLoading(true);
 
       // API documentation:
@@ -47,24 +46,24 @@ const App = () => {
         .then(data => {
           setCards(initialCards => [...initialCards, ...data.cards]);
           setIsLoading(false);
-          setNewRequest(false);
+          setIsNewRequest(false);
         })
         .catch(err => {
           console.log(err);
           setIsError(true);
           setIsLoading(false);
-          setNewRequest(false);
+          setIsNewRequest(false);
         });
     };
 
     fetchCards();
-  }, [newRequest, page]);
+  }, [isNewRequest, page]);
 
   //
   // Scroll event handling
   useEffect(() => {
     const handleScroll = throttle(() => {
-      if (newRequest) return;
+      if (isNewRequest) return;
 
       const {current: cards} = cardsRef;
       const {innerHeight, scrollY} = window;
@@ -75,7 +74,7 @@ const App = () => {
       if (innerHeight + scrollY > cardsBottom - buffer) {
         console.log('should load more!', `initial page: ${page}`);
         setPage(page + 1);
-        setNewRequest(true);
+        setIsNewRequest(true);
       }
     }, 250);
 
@@ -84,7 +83,7 @@ const App = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [newRequest, page]);
+  }, [isNewRequest, page]);
 
   return (
     <>
