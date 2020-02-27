@@ -19,24 +19,29 @@ const App = () => {
   const [cards, setCards] = useState([]);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [nameQuery, setNameQuery] = useState(false);
+  const [isInfiniteScroll, setIsInfiniteScroll] = useState(false);
   const [isNewRequest, setIsNewRequest] = useState(true);
   const [page, setPage] = useState(1);
 
-  const cardsRef = useRef(null);
+  const cardsRef = useRef();
+  const searchInputRef = useRef();
 
   //
   // Data fetching
   useEffect(() => {
-    const cardCount = 20;
+    const cardsPerPage = 20;
 
+    // API documentation:
+    // https://docs.elderscrollslegends.io/#api_v1cards_list
     const fetchCards = async () => {
       if (!isNewRequest) return;
       setIsLoading(true);
 
-      // API documentation:
-      // https://docs.elderscrollslegends.io/#api_v1cards_list
+      const nameParameter = nameQuery ? `&name=${ nameQuery }` : '';
+
       const response = await fetch(
-        `https://api.elderscrollslegends.io/v1/cards?page=${page}&pageSize=${cardCount}`
+        `https://api.elderscrollslegends.io/v1/cards?page=${ page }&pageSize=${ cardsPerPage }${ nameParameter }`
       );
 
       setIsError(!response.ok);
@@ -44,12 +49,13 @@ const App = () => {
       response
         .json()
         .then(data => {
-          setCards(initialCards => [...initialCards, ...data.cards]);
+          setCards(previousCards => [...previousCards, ...data.cards]);
+          setIsInfiniteScroll(data._totalCount > cardsPerPage * page);
+          setIsError(data.cards.length < 1);
           setIsLoading(false);
           setIsNewRequest(false);
         })
         .catch(err => {
-          console.log(err);
           setIsError(true);
           setIsLoading(false);
           setIsNewRequest(false);
@@ -57,13 +63,13 @@ const App = () => {
     };
 
     fetchCards();
-  }, [isNewRequest, page]);
+  }, [nameQuery, isNewRequest, page]);
 
   //
   // Scroll event handling
   useEffect(() => {
     const handleScroll = throttle(() => {
-      if (isNewRequest) return;
+      if (isNewRequest || !isInfiniteScroll) return;
 
       const {current: cards} = cardsRef;
       const {innerHeight, scrollY} = window;
@@ -72,8 +78,7 @@ const App = () => {
       const buffer = innerHeight * .3;
 
       if (innerHeight + scrollY > cardsBottom - buffer) {
-        console.log('should load more!', `initial page: ${page}`);
-        setPage(page + 1);
+        setPage(previousPage => previousPage + 1);
         setIsNewRequest(true);
       }
     }, 250);
@@ -83,22 +88,46 @@ const App = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isNewRequest, page]);
+  }, [isInfiniteScroll, isNewRequest]);
 
   return (
     <>
       <SiteHeader />
 
       <main role="main" className="app">
-        { isLoading && <LoadingIndicator /> }
+        <form onSubmit={ (event) => {
+          event.preventDefault();
+          const { current: { value } } = searchInputRef;
+          setCards([]);
+          setPage(1);
+          setNameQuery(value);
+          setIsNewRequest(true);
+        } }>
+          <label>
+            Search by name
+            <input
+              autoCapitalize="none"
+              autoCorrect="off"
+              ref={ searchInputRef }
+              type="search"
+            />
+          </label>
+          <button>Search</button>
+        </form>
 
-        { isError || (cards.length < 1 && !isLoading) ?
+        { nameQuery && !isLoading &&
+          <h2>Cards matching the name: “{ nameQuery }”</h2>
+        }
+
+        { isError && !isLoading ?
           <p>Uh oh. No cards were found.</p>
         :
           <ul className="cards" ref={ cardsRef }>
             { cards.map(card => <Card { ...card } key={ card.id } />) }
           </ul>
         }
+
+        { isLoading && <LoadingIndicator /> }
       </main>
     </>
   );
