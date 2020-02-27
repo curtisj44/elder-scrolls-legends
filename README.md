@@ -16,6 +16,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. Start the app: `npm start`
 1. View the app: http://localhost:3000/
 
+## Deployment
+
+Each commit to `master` automatically deploys via Netlify:
+
+🔗 https://elves-orcs-and-more.netlify.com/
+
+🔒 https://app.netlify.com/sites/elves-orcs-and-more/settings/general
+
 ## Available Scripts
 
 In the project directory, you can run:
