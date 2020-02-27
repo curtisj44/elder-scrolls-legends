@@ -1,7 +1,6 @@
 .card {
   padding: 3% 5%;
   background: var(--corbeau);
-  text-align: center;
 }
 
 /* TODO: use BEM */

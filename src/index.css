@@ -11,6 +11,9 @@
   /* fonts */
   --sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --serif: Georgia, Times, sans-serif;
+
+  /* forms */
+  --button-height: 36px;
 }
 
 html {
@@ -30,18 +33,65 @@ body,
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 dd,
-p {
+p,
+ul {
   margin: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  padding: 2em 5% .5em;
 }
 
 ul {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+input {
+  background: #fff;
+  border-radius: 0;
+  border: 0;
+  height: var(--button-height);
+  padding: 0 .7em;
+}
+
+input[type='search'] {
+  -webkit-appearance: none;
+}
+
+button {
+  -webkit-appearance: button;
+  background: var(--dark-moon);
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  height: var(--button-height);
+  padding: 0 1em;
+}
+
+label {
+  color: #000;
+  display: block;
+  font-size: .9rem;
+  padding-bottom: .2rem;
+}
+
+form {
+  background: #ff4800 linear-gradient(319deg, #69c2ff 0%, #fe71ff 50%, #ff4800 100%);
+  padding: 1em 0;
+  text-align: center;
 }

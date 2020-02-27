@@ -95,6 +95,7 @@ const App = () => {
       <SiteHeader />
 
       <main role="main" className="app">
+        {/* TODO: move to its own file */}
         <form onSubmit={ (event) => {
           event.preventDefault();
           const { current: { value } } = searchInputRef;
@@ -103,24 +104,28 @@ const App = () => {
           setNameQuery(value);
           setIsNewRequest(true);
         } }>
-          <label>
+          <label htmlFor="search-input">
             Search by name
-            <input
-              autoCapitalize="none"
-              autoCorrect="off"
-              ref={ searchInputRef }
-              type="search"
-            />
           </label>
+
+          <input
+            autoCapitalize="none"
+            autoCorrect="off"
+            id="search-input"
+            ref={ searchInputRef }
+            type="search"
+          />
+
           <button>Search</button>
         </form>
 
         { nameQuery && !isLoading &&
-          <h2>Cards matching the name: “{ nameQuery }”</h2>
+          <h2>Cards matching the name: { nameQuery }</h2>
         }
 
+        {/* TODO: handle ARIA */}
         { isError && !isLoading ?
-          <p>Uh oh. No cards were found.</p>
+          <p className="error-message">Uh oh. No cards were found.</p>
         :
           <ul className="cards" ref={ cardsRef }>
             { cards.map(card => <Card { ...card } key={ card.id } />) }
