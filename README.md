@@ -3,6 +3,19 @@ React app consuming an API for The Elder Scrolls: Legends
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup
+
+### Prerequisites
+
+1. Node >= 12.16.1
+
+### Getting Started
+
+1. Use correct version of Node: `nvm use`
+1. Install dependencies: `npm install`
+1. Start the app: `npm start`
+1. View the app: http://localhost:3000/
+
 ## Available Scripts
 
 In the project directory, you can run:
