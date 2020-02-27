@@ -1,0 +1,31 @@
+.card {
+  padding: 3% 5%;
+  background: var(--corbeau);
+  text-align: center;
+}
+
+/* TODO: use BEM */
+
+.card dt,
+.card dd {
+  padding: .6rem 8%;
+}
+
+.card dt {
+  color: var(--pumpkin-pie);
+  font: .7rem var(--serif);
+  letter-spacing: .07em;
+  padding-bottom: .2rem;
+  text-transform: uppercase;
+}
+
+.card dd {
+  font-size: .9rem;
+  padding-top: 0;
+}
+
+/* Images are either 409x663 or 350x580 */
+.card img {
+  min-height: 366px;
+  width: 350px;
+}
