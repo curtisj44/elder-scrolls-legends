@@ -25,6 +25,11 @@
 
 /* Images are either 409x663 or 350x580 */
 .card img {
+  height: auto;
+  /*
+  Approximate `min-height` used across different viewports. Setting here to avoid large
+  layout "jump" when image is downloaded.
+  */
   min-height: 366px;
-  width: 350px;
+  width: auto;
 }

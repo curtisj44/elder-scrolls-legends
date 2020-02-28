@@ -11,27 +11,41 @@ import './Card.css';
 
 // TODO: add propTypes
 
-const Card = ({imageUrl, name, set, text, type}) => {
+const Card = ({ imageUrl, name, set, text, type }) => {
   return (
     <li className="card">
-      {/* Using `aria-hidden="true"` since the content of this image is duplicated in text */}
-      <img src={imageUrl} alt="" aria-hidden="true" loading="lazy" />
+
+      {/*
+        1. Using `aria-hidden="true"` since the content of this image is duplicated in text
+
+        2. Image sizes are either 409x663 or 350x580. Using the smaller size in the `width`
+           and `height` attributes to improve performance with use of `loading` attribute
+      */}
+      <img
+        alt=""
+        aria-hidden="true"
+        height="580"
+        loading="lazy"
+        src={ imageUrl }
+        width="350"
+      />
+
       <dl>
         <dt>Name</dt>
-        <dd>{name}</dd>
+        <dd>{ name }</dd>
 
-        {text && (
+        { text &&
           <>
             <dt>Text</dt>
-            <dd>{text}</dd>
+            <dd>{ text }</dd>
           </>
-        )}
+        }
 
         <dt>Set Name</dt>
-        <dd>{set.name}</dd>
+        <dd>{ set.name }</dd>
 
         <dt>Type</dt>
-        <dd>{type}</dd>
+        <dd>{ type }</dd>
       </dl>
     </li>
   );
