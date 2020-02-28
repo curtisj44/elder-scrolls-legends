@@ -43,3 +43,9 @@ These a few of the key commands:
 - [Getting Started](https://facebook.github.io/create-react-app/docs/getting-started).
 - [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 - [Advanced Configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+## What’s Missing?
+
+1. **Accessibility considerations**
+
+   All dynamic content (additional cards, error messages, loading, searching) should be reviewed further and most-likely improved with ARIA.

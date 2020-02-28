@@ -123,7 +123,6 @@ const App = () => {
           <h2>Cards matching the name: { nameQuery }</h2>
         }
 
-        {/* TODO: handle ARIA */}
         { isError && !isLoading ?
           <p className="error-message">Uh oh. No cards were found.</p>
         :
