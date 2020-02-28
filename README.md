@@ -1,6 +1,19 @@
 # elder-scrolls-legends
 React app consuming an API for The Elder Scrolls: Legends
 
+**Table of Contents**
+
+- [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Getting Started](#getting-started)
+- [Deployment](#deployment)
+- [Development](#development)
+   - [Common Scripts](#common-scripts)
+   - [Learn More About Create React App](#learn-more-about-create-react-app)
+- [What’s Missing](#what-s-missing)
+
+---
+
 ## Setup
 
 ### Prerequisites
@@ -38,7 +51,7 @@ These a few of the key commands:
 | `npm test`| Launches the test runner in the interactive watch mode.<br /> See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information. |
 | `npm run build` | Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information. |
 
-## Learn more about Create React App
+## Learn More About Create React App
 
 - [Getting Started](https://facebook.github.io/create-react-app/docs/getting-started).
 - [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
