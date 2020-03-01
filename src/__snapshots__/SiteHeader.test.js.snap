@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SiteHeader renders correctly 1`] = `
+<header
+  className="site-header"
+  role="banner"
+>
+  <h1
+    className="site-header__heading"
+  >
+    The Elder Scrolls: Legends
+  </h1>
+</header>
+`;

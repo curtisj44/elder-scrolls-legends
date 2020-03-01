@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card when \`text\` prop is defined renders with Text content 1`] = `
+<li
+  className="card"
+>
+  <img
+    alt=""
+    aria-hidden="true"
+    height="580"
+    loading="lazy"
+    src="imageUrl-mock"
+    width="350"
+  />
+  <dl>
+    <dt>
+      Name
+    </dt>
+    <dd>
+      name-mock
+    </dd>
+    <dt>
+      Text
+    </dt>
+    <dd>
+      text-mock
+    </dd>
+    <dt>
+      Set Name
+    </dt>
+    <dd />
+    <dt>
+      Type
+    </dt>
+    <dd>
+      type-mock
+    </dd>
+  </dl>
+</li>
+`;
+
+exports[`Card when \`text\` prop is not defined renders without Text content 1`] = `
+<li
+  className="card"
+>
+  <img
+    alt=""
+    aria-hidden="true"
+    height="580"
+    loading="lazy"
+    src="imageUrl-mock"
+    width="350"
+  />
+  <dl>
+    <dt>
+      Name
+    </dt>
+    <dd>
+      name-mock
+    </dd>
+    <dt>
+      Set Name
+    </dt>
+    <dd />
+    <dt>
+      Type
+    </dt>
+    <dd>
+      type-mock
+    </dd>
+  </dl>
+</li>
+`;

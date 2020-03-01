@@ -7,8 +7,7 @@
   z-index: 100;
 }
 
-/* TODO: use BEM */
-.site-header h1 {
+.site-header__heading {
   background: var(--dark-moon);
   font: 1rem/1 var(--serif);
   letter-spacing: 0.07em;

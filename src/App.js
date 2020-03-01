@@ -71,8 +71,8 @@ const App = () => {
     const handleScroll = throttle(() => {
       if (isNewRequest || !isInfiniteScroll) return;
 
-      const {current: cards} = cardsRef;
-      const {innerHeight, scrollY} = window;
+      const { current: cards } = cardsRef;
+      const { innerHeight, scrollY } = window;
 
       const cardsBottom = cards.clientHeight + cards.offsetTop;
       const buffer = innerHeight * .3;
@@ -95,13 +95,11 @@ const App = () => {
       <SiteHeader />
 
       <main role="main" className="app">
-        {/* TODO: move to its own file */}
-        <form onSubmit={ (event) => {
+        <form onSubmit={ event => {
           event.preventDefault();
-          const { current: { value } } = searchInputRef;
           setCards([]);
           setPage(1);
-          setNameQuery(value);
+          setNameQuery(searchInputRef.current.value);
           setIsNewRequest(true);
         } }>
           <label htmlFor="search-input">

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+Array [
+  <SiteHeader />,
+  <main
+    className="app"
+    role="main"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="search-input"
+      >
+        Search by name
+      </label>
+      <input
+        autoCapitalize="none"
+        autoCorrect="off"
+        id="search-input"
+        type="search"
+      />
+      <button>
+        Search
+      </button>
+    </form>
+    <ul
+      className="cards"
+    />
+  </main>,
+]
+`;

@@ -11,6 +11,8 @@ import './LoadingIndicator.css';
 
 export default () => (
   <div className="loading-indicator">
-    <div className="loading-indicator__text">Loading&hellip;</div>
+    <div className="loading-indicator__text">
+      Loading&hellip;
+    </div>
   </div>
 );

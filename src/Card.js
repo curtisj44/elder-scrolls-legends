@@ -14,7 +14,6 @@ import './Card.css';
 const Card = ({ imageUrl, name, set, text, type }) => {
   return (
     <li className="card">
-
       {/*
         1. Using `aria-hidden="true"` since the content of this image is duplicated in text
 
