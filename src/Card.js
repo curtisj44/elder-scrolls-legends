@@ -22,6 +22,7 @@ const Card = ({ imageUrl, name, set, text, type }) => {
       <img
         alt=""
         aria-hidden="true"
+        className="card__image"
         height="580"
         loading="lazy"
         src={ imageUrl }
@@ -29,21 +30,21 @@ const Card = ({ imageUrl, name, set, text, type }) => {
       />
 
       <dl>
-        <dt>Name</dt>
-        <dd>{ name }</dd>
+        <dt className="card__term">Name</dt>
+        <dd className="card__description">{ name }</dd>
 
         { text &&
           <>
-            <dt>Text</dt>
-            <dd>{ text }</dd>
+            <dt className="card__term">Text</dt>
+            <dd className="card__description">{ text }</dd>
           </>
         }
 
-        <dt>Set Name</dt>
-        <dd>{ set.name }</dd>
+        <dt className="card__term">Set Name</dt>
+        <dd className="card__description">{ set.name }</dd>
 
-        <dt>Type</dt>
-        <dd>{ type }</dd>
+        <dt className="card__term">Type</dt>
+        <dd className="card__description">{ type }</dd>
       </dl>
     </li>
   );

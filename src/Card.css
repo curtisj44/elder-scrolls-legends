@@ -3,14 +3,12 @@
   background: var(--corbeau);
 }
 
-/* TODO: use BEM */
-
-.card dt,
-.card dd {
+.card__term,
+.card__description {
   padding: .6rem 8%;
 }
 
-.card dt {
+.card__term {
   color: var(--pumpkin-pie);
   font: .7rem var(--serif);
   letter-spacing: .07em;
@@ -18,13 +16,13 @@
   text-transform: uppercase;
 }
 
-.card dd {
+.card__description {
   font-size: .9rem;
   padding-top: 0;
 }
 
 /* Images are either 409x663 or 350x580 */
-.card img {
+.card__image {
   height: auto;
   /*
   Approximate `min-height` used across different viewports. Setting here to avoid large

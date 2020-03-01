@@ -7,32 +7,51 @@ exports[`Card when \`text\` prop is defined renders with Text content 1`] = `
   <img
     alt=""
     aria-hidden="true"
+    className="card__image"
     height="580"
     loading="lazy"
     src="imageUrl-mock"
     width="350"
   />
   <dl>
-    <dt>
+    <dt
+      className="card__term"
+    >
       Name
     </dt>
-    <dd>
+    <dd
+      className="card__description"
+    >
       name-mock
     </dd>
-    <dt>
+    <dt
+      className="card__term"
+    >
       Text
     </dt>
-    <dd>
+    <dd
+      className="card__description"
+    >
       text-mock
     </dd>
-    <dt>
+    <dt
+      className="card__term"
+    >
       Set Name
     </dt>
-    <dd />
-    <dt>
+    <dd
+      className="card__description"
+    >
+      set-mock
+    </dd>
+    <dt
+      className="card__term"
+    >
       Type
     </dt>
-    <dd>
+    <dd
+      className="card__description"
+    >
       type-mock
     </dd>
   </dl>
@@ -46,26 +65,41 @@ exports[`Card when \`text\` prop is not defined renders without Text content 1`]
   <img
     alt=""
     aria-hidden="true"
+    className="card__image"
     height="580"
     loading="lazy"
     src="imageUrl-mock"
     width="350"
   />
   <dl>
-    <dt>
+    <dt
+      className="card__term"
+    >
       Name
     </dt>
-    <dd>
+    <dd
+      className="card__description"
+    >
       name-mock
     </dd>
-    <dt>
+    <dt
+      className="card__term"
+    >
       Set Name
     </dt>
-    <dd />
-    <dt>
+    <dd
+      className="card__description"
+    >
+      set-mock
+    </dd>
+    <dt
+      className="card__term"
+    >
       Type
     </dt>
-    <dd>
+    <dd
+      className="card__description"
+    >
       type-mock
     </dd>
   </dl>
