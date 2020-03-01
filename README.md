@@ -36,7 +36,7 @@ Each commit to `master` automatically deploys via Netlify:
 
 🔗 https://elves-orcs-and-more.netlify.com/
 
-🔒 https://app.netlify.com/sites/elves-orcs-and-more/overview
+🔒 https://app.netlify.com/sites/elves-orcs-and-more
 
 ## Development
 
