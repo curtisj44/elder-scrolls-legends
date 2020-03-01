@@ -60,6 +60,11 @@ These a few of the key commands:
 
 ## What’s Missing?
 
-1. **Accessibility considerations**
+1. **Better accessibility considerations**
 
    All dynamic content (additional cards, error messages, loading, searching) should be reviewed further and most-likely improved with ARIA.
+
+1. **More tests**
+
+   1. `App.js` is entirely missing tests, but it needs a bunch of them.
+   1. Builds with breaking and/or insufficient tests should break the Netlify build (and not be deployed)
