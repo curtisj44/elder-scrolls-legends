@@ -13,7 +13,9 @@ import Card from './Card';
 const defaultProps = {
   imageUrl: 'imageUrl-mock',
   name: 'name-mock',
-  set: 'set-mock',
+  set: {
+    name: 'set-mock'
+  },
   type: 'type-mock'
 };
 
