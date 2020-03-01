@@ -2,14 +2,13 @@
 // ------------
 
 // Libraries
+import PropTypes from 'prop-types';
 import React from 'react';
 // Styles
 import './Card.css';
 
 // Internal
 // --------
-
-// TODO: add propTypes
 
 const Card = ({ imageUrl, name, set, text, type }) => {
   return (
@@ -48,6 +47,16 @@ const Card = ({ imageUrl, name, set, text, type }) => {
       </dl>
     </li>
   );
+};
+
+Card.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  set: PropTypes.shape({
+    name: PropTypes.string.isRequired
+  }).isRequired,
+  text: PropTypes.string,
+  type: PropTypes.string.isRequired,
 };
 
 // Exports
