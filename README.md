@@ -68,3 +68,7 @@ These a few of the key commands:
 
    1. `App.js` is entirely missing tests, but it needs a bunch of them.
    1. Builds with breaking and/or insufficient tests should break the Netlify build (and not be deployed)
+
+1. **Icons / Favicons**
+
+   The default used by Create React App have been left in place, but should obviously be replaced in a real-world project.
