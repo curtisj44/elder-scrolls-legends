@@ -10,7 +10,7 @@ React app consuming an API for The Elder Scrolls: Legends
 - [Development](#development)
    - [Common Scripts](#common-scripts)
    - [Learn More About Create React App](#learn-more-about-create-react-app)
-- [What’s Missing](#what-s-missing)
+- [What’s Missing?](#whats-missing)
 
 ---
 
