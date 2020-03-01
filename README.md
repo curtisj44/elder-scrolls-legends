@@ -18,11 +18,12 @@ React app consuming an API for The Elder Scrolls: Legends
 
 ### Prerequisites
 
-1. Node >= 12.16.1
+1. Node v12.16.1
+   - I’d recommend using [NVM](https://github.com/nvm-sh/nvm) to do that.
 
 ### Getting Started
 
-1. Use correct version of Node: `nvm use`
+1. Assuming you’re using NVM, set the correct version of Node: `nvm use`
 1. Install dependencies: `npm install`
 1. Start the app: `npm start`
 1. View the app: http://localhost:3000/
