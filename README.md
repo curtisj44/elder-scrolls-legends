@@ -34,7 +34,7 @@ Each commit to `master` automatically deploys via Netlify:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a7d05845-2359-42b7-8fa3-508ff74334a2/deploy-status)](https://app.netlify.com/sites/elves-orcs-and-more/deploys)
 
-🔗 https://elves-orcs-and-more.netlify.com/
+🔗 https://elves-orcs-and-more.netlify.app/
 
 🔒 https://app.netlify.com/sites/elves-orcs-and-more
 
