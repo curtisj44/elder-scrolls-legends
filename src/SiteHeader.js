@@ -6,10 +6,10 @@ import React from 'react';
 // Styles
 import './SiteHeader.css';
 
-// Exports
-// -------
+// Internal
+// --------
 
-export default () => {
+const SiteHeader = () => {
   return (
     <header className="site-header" role="banner">
       <h1 className="site-header__heading">
@@ -18,3 +18,9 @@ export default () => {
     </header>
   );
 };
+
+
+// Exports
+// -------
+
+export default SiteHeader;
